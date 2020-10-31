@@ -1,0 +1,20 @@
+<div class="tabla__filaTitulo">
+    <h2 style="font-size: 2rem;">Ingredientes</h2>
+    <a routerLink="/ingredientes">
+        <app-boton-agregar *ngIf="recetaChild.autorUserName == usuarioLogueado.userName"></app-boton-agregar>
+    </a>
+</div>
+
+<table *ngIf="recetaChild.ingredientes.length > 0">
+    <tr *ngFor="let ingrediente of recetaChild.ingredientes ; let i = index">
+        <td>{{ingrediente.alimento.nombre}}</td>
+        <td>{{ingrediente.cantidad}}</td>
+        <td class="tabla__columnaDetalle--eliminar" *ngIf="recetaChild.autorUserName == usuarioLogueado.userName">
+            <a><i  class="fas fa-times-circle" (click) = eliminarIngrediente(i)></i></a>
+        </td>
+    </tr>
+</table>
+
+<h1 *ngIf="recetaChild.ingredientes.length === 0" class="alert">
+    La receta no tiene ingredientes!
+</h1>

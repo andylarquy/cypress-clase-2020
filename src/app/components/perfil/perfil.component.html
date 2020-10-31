@@ -1,0 +1,27 @@
+<main>
+    <app-nav></app-nav>
+    <article>
+        <div class="contenedor_principal">
+            <div class="contenedor_perfil">
+                <app-titulo-perfil [usuarioLogueado]="usuarioLogueado"></app-titulo-perfil>
+                <app-informacion-general [usuarioLogueado]="usuarioLogueado"></app-informacion-general>
+                <app-condiciones-alimenticias [usuarioLogueado]="usuarioLogueado"></app-condiciones-alimenticias>
+                <div class="contenedor_listas_de_alimentos_perfil">
+                    <app-listas-perfil class="lista" [usuarioLogueado]="usuarioLogueado" collection="alimentosPreferidos" type="text" description="Alimentos preferidos"  [lista] = "usuarioLogueado.alimentosPreferidos"></app-listas-perfil>
+                    <app-listas-perfil class="lista" [usuarioLogueado]="usuarioLogueado" collection="alimentosDisgustados" type="text" description="Alimentos disgustados" [lista] = "usuarioLogueado.alimentosDisgustados" ></app-listas-perfil>
+                </div>
+                <app-mis-recetas [usuarioLogueado]="usuarioLogueado"></app-mis-recetas>
+                <div class="contenedor_error">
+                    <div class="alert" *ngFor="let error of errores">{{error}}</div>
+                </div>
+                <div class="contenedor_botones_acciones">
+                    <div class="botones_acciones">
+                        <input type="submit" value="Aceptar" class="btn_aceptar" (click)="aceptar()">
+                        <input type="submit" value="Cancelar" class="btn_cancelar" (click)="cancelar()">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <app-footer></app-footer>
+</main>

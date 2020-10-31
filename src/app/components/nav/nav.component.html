@@ -1,0 +1,23 @@
+<nav class="contenedor_barraNavegacion">
+    <div class="contenedor_nav">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars" id="icono-barras"></i>
+        </label>
+        <label class="logo">Food Overflow</label>
+        <ul class="lista_links">
+            <li class="links">
+                <i class="fas fa-home" id="icono-home"></i>
+                <a routerLink="/busqueda-recetas">Home</a>
+            </li>
+            <li class="links">
+                <i class="fas fa-user" id="icono-user"></i>
+                <a routerLink="/perfil/{{usuarioLogueado.id}}">Perfil</a>
+            </li>
+            <li class="links">
+                <a (click)=salir()><i class="fas fa-sign-out-alt" id="icono-logout"></i></a>
+                <a class="salir" (click)=salir()>Salir</a>
+            </li>
+        </ul>
+    </div>
+</nav>

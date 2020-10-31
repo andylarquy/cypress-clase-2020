@@ -1,0 +1,23 @@
+<div class="listas_de_alimentos">
+    <div class="tipo_de_alimentos">
+        <h2>{{description}}</h2>
+        <a routerLink="/alimentos/{{collection}}">
+            <app-boton-agregar></app-boton-agregar>
+        </a>
+    </div>
+    <div class="listaAlimentos">
+        <ul class="lista">
+            <li class="nombreColumna">
+                <h3>Alimento</h3>
+            </li>
+            <li *ngFor="let alimento of alimentos ; let i = index">
+                <h4 class="nombre-alimento">{{alimento.nombre}}</h4>
+                <h4 class="cruz-lista"><i class="fas fa-times-circle" (click)=eliminarAlimento(i,collection,alimento)></i></h4>
+            </li>
+            <h1 *ngIf="lista.length === 0" class="alert">
+                El usuario no tiene {{description}}!
+            </h1>
+        </ul>
+    </div>
+</div>
+

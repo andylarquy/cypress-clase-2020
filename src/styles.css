@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    font-size: 10px;
+}
+
+:root {
+    --color-primario: #d6001d;
+    --color-secundario: white;
+    --color-terciario: #fad2b8;
+    --color-cuarto: rgb(255, 235, 225);
+    --color-footer: #414141;
+    --color-letras: #251F44;
+    --color-boton-buscar: #fd933c;
+    --ancho-default: 100%;
+    --fontfamily-foodoverflow: 'Lobster Two', cursive;
+    --fuente-default: 'Ubuntu', sans-serif;
+}
+
+body {
+    background-color: var( --color-terciario);
+    font-family: var(--fuente-default);
+}
+
+main {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 50px 12fr 1fr;
+    grid-template-areas: "nav" "article" "footer";
+}
+
+article {
+    grid-area: article;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.contenedor_botones_acciones {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.alert {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    background-color: #f8c2c7;
+    border-radius: 1rem;
+    color: rgb(255, 42, 42);
+    border: 0.1rem solid red;
+    text-align: center;
+    padding: 0.5rem;
+    font-weight: initial;
+}
+
+.contenedor_error {
+    display: flex;
+    justify-content: center;
+}
+
+.botones_acciones {
+    margin: 1rem 1rem 1rem 0rem;
+    display: flex;
+}
+
+.botones_acciones input {
+    color: white;
+    height: 4rem;
+    width: 10rem;
+    margin-left: 1rem;
+    background-color: var(--color-primario);
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid var(--color-primario);
+    font-weight: bold;
+}
+
+.botones_acciones .btn_cancelar {
+    background-color: white;
+    border: solid red;
+    color: red;
+}
+
+.botones_acciones input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #fa0929;
+    color: white;
+    font-weight: bold;
+}

@@ -1,8 +1,8 @@
 {
-    "baseUrl":"https://rappi.com.ar",
+    "baseUrl":"http://localhost:4200",
     "ignoreTestFiles":"**/examples/*",
     "testFiles":[
-        "**/rappi/*"
+        "**/foodoverflow/*"
     ],
     "chromeWebSecurity": false
 

@@ -1,0 +1,69 @@
+.contenedor__titulo {
+    background: var(--color-primario);
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1rem 1rem 0 0;
+    padding-right: 0.5rem;
+}
+
+.contenedor__titulo--foto {
+    width: 10rem;
+    height: auto;
+    display: flex;
+}
+
+.contenedor__titulo--foto img, input {
+    border-top-left-radius: 1rem;
+    width: inherit;
+}
+
+.sinFoto {
+    border-color: white;
+    border: solid;
+    color: white;
+    font-size: 2em;
+}
+
+.contenedor__titulo--texto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: var(--color-secundario);
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.contenedor__titulo--texto input{
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid var(--color-primario);
+}
+.condicionesAlimentarias {
+    padding-top: 1rem;
+    display: flex;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 400px) {
+    .contenedor__titulo {
+        height: 9rem;
+        text-align: end;
+        font-size: 1.2rem;
+    }
+    .contenedor__titulo--texto {
+        font-size: 1rem;
+    }
+    .condicionesAlimentarias {
+        font-size: 1rem;
+    }
+}
+
+@media(min-width: 401px) and (max-width: 768px) {
+    .contenedor__titulo {
+        text-align: end;
+    }
+}

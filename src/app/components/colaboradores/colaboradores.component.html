@@ -1,0 +1,27 @@
+<main>
+    <app-nav></app-nav>
+    <article>
+        <div class="contenedor_principal">
+            <h1>Colaboradores</h1>
+            <div class="contenedor_listaAlimentos">
+                <ul class="lista">
+                    <li class="nombreColumna">
+                        <h3>Nombre</h3>
+                    </li>
+                    <button 
+                    [ngClass]="colaborador.seleccionado ? 'seleccionado' : ''"
+                     *ngFor="let colaborador of colaboradores | orderAlimentos" (click)=seleccionarColaborador(colaborador) >
+                            {{colaborador.nombre}}
+                    </button>
+                </ul>
+            </div>
+            <div class="contenedor_botones_acciones">
+                <div class="botones_acciones">
+                    <input type="submit" value="Aceptar" class="btn_aceptar" (click)=agregarColaboradores()>
+                    <input type="submit" value="Cancelar" class="btn_cancelar" (click)=volver()>
+                </div>
+            </div>
+        </div>
+    </article>
+    <app-footer></app-footer>
+</main>

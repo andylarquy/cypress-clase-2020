@@ -1,0 +1,9 @@
+<div class="contenedor_condiciones_alimenticias_perfil">
+    <h2>Condiciones</h2>
+    <div class="checkbox_condiciones">
+        <div class="condicion_alimenticia" *ngFor="let condicion of condiciones">
+            <input type="checkbox" [checked]="tieneCondicion(condicion)" (change)="agregarOquitar(condicion)">
+            <label>{{condicion.tipo}}</label>
+        </div>
+    </div>
+</div>

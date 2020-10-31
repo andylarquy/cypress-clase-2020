@@ -1,0 +1,64 @@
+.receta__colaboradores--titulo {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.nombreColumna {
+    color: white;
+    background-color: var(--color-primario);
+}
+
+.receta__colaboradores--lista ul {
+    list-style: none;
+    max-height: 10rem;
+    margin-top: 0.5rem;
+    overflow: auto;
+    padding: 0;
+    text-indent: 1rem;
+    border: 0.5px solid var(--color-primario);
+}
+
+.receta__colaboradores--lista li {
+    line-height: 3rem;
+    justify-content: center;
+    display: flex;
+    border: 0.5px solid var(--color-primario);
+}
+
+.item_lista,
+.item_lista_cruz {
+    display: flex;
+}
+
+.item_lista {
+    font-size: 1.5rem;
+    justify-content: flex-end;
+    flex-grow: 1.38;
+}
+
+.item_lista_cruz {
+    padding-right: 1rem;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1.35;
+    font-size: 1.5rem;
+}
+
+@media(max-width: 400px) {
+    .item_lista {
+        flex-grow: 1.48;
+    }
+}
+
+@media(min-width: 401px) and (max-width: 768px) {
+    .item_lista {
+        flex-grow: 1.43;
+    }
+}
+
+.alert{
+    margin-top: 0.5rem;
+}

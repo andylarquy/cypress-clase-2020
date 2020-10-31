@@ -1,0 +1,105 @@
+main {
+    grid-template-rows: 12fr 50px;
+    grid-template-areas: "article" "footer";
+}
+
+article {
+    background-image: url("src/assets/img/Login.jpg");
+    align-items: center;
+}
+
+.loginbox {
+    width: 35rem;
+    height: 30rem;
+    margin-bottom: 15rem;
+}
+
+form {
+    background: linear-gradient(to top, rgb(255, 222, 222),  #f8eded);
+    padding: 1rem 2rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.titulo-loginbox {
+    font-family: var(--fontfamily-foodoverflow);
+    color: var(--color-primario);
+    font-size: 6rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-shadow: #f7f3f0 2px 2px 3px;
+}
+
+.loginbox label {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.loginbox input[type="text"], 
+.loginbox input[type="password"] {
+    width: 100%;
+    height: 2.8rem;
+    border: none;
+    border-bottom: 1px solid grey;
+    padding-left: 0.5rem;
+    background: transparent;
+    outline: none;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.loginbox input[type="text"]:focus, 
+.loginbox input[type="password"]:focus {
+    box-shadow: inset 0px -40px 30px -30px rgba(255, 1, 1, 0.199);
+}
+
+.loginbox input:focus::placeholder {
+    transition: opacity 0.0s 0.0s ease;
+    opacity: 0;
+}
+
+.loginbox_remember-forgot {
+    height: 3rem;
+    display: flex;
+}
+
+.loginbox_remember label {
+    color: black;
+    font-weight: unset;
+    font-size: 1.6rem;
+    margin-left: 0.5rem;
+}
+
+.loginbox_forgot {
+    text-decoration: none;
+    color: black;
+    font-size: 1.6rem;
+}
+
+.loginbox_forgot:hover {
+    text-decoration: none;
+    color: var(--color-primario);
+    font-size: 1.6rem;
+}
+
+.loginbox input[type="submit"] {
+    height: 4rem;
+    width: 100%;
+    color: white;
+    background-color: var(--color-primario);
+    font-size: 1.8rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid var(--color-primario);
+}
+
+.loginbox input[type="submit"]:hover {
+    cursor: pointer;
+    background: #fa0929;
+    color: var(--color-secundario);
+    font-weight: bold;
+}

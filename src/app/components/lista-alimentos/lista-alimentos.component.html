@@ -1,0 +1,8 @@
+<ul class="lista">
+    <li class="nombreColumna">
+        <h3>Alimento</h3>
+    </li>
+    <button [ngClass]="alimento === alimentoSeleccionado ? 'seleccionado' : ''" *ngFor="let alimento of alimentos" (click)=seleccionarAlimento(alimento)>
+            {{alimento.nombre}}
+    </button>
+</ul>

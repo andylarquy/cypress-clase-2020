@@ -1,0 +1,30 @@
+<main>
+    <app-nav></app-nav>
+    <article>
+        <div class="contenedor__receta">
+            <app-contenedor-titulo [recetaChild]="receta"></app-contenedor-titulo>
+            <div class="contenedor__contenidoReceta">
+                <div class="app-receta-clasificacion">
+                    <app-receta-clasificacion [recetaChild]="receta">></app-receta-clasificacion>
+                </div>
+                <div class="receta__detalle">
+                    <div class="app-tabla">
+                        <app-tabla [recetaChild]="receta"></app-tabla>
+                        <app-tabla2 [recetaChild]="receta"></app-tabla2>
+                    </div>
+                    <app-receta-colaboradores [recetaChild]="receta"></app-receta-colaboradores>
+                    <div class="contenedor_error">
+                        <div class="alert" *ngIf="mensaje != ''">{{mensaje}}</div>
+                    </div>
+                    <div class="contenedor_botones_acciones">
+                        <div class="botones_acciones">
+                            <input *ngIf="receta.autorUserName == usuarioLogueado.userName" type="submit" value="Aceptar" class="btn_aceptar" (click)="aceptar()">
+                            <input type="submit" value="Cancelar" class="btn_cancelar" (click)="cancelar()">
+                        </div>
+                    </div>                
+                </div>
+            </div>
+        </div>
+    </article>
+    <app-footer></app-footer>
+</main>

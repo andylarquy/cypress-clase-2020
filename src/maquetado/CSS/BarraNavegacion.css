@@ -1,0 +1,138 @@
+* {
+    text-decoration: none;
+}
+
+.contenedor_barraNavegacion {
+    background-color: var(--color-primario);
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor_nav {
+    width: 70%;
+    font-size: 2rem;
+    justify-content: space-between;
+}
+
+.salir {
+    display: none;
+}
+
+label.logo {
+    color: white;
+    font-size: 2.5rem;
+    line-height: 8rem;
+    font-weight: bold;
+    font-family: var(--fontfamily-foodoverflow);
+}
+
+nav .lista_links li a {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+}
+
+#icono-user,
+#icono-home {
+    display: none;
+}
+
+nav .lista_links {
+    float: right;
+    color: white;
+}
+
+nav .lista_links .links {
+    display: inline-block;
+    line-height: 8rem;
+    margin: 0 0.5rem;
+    font-size: 2rem;
+}
+
+nav .lista_links .links i {
+    color: white;
+    font-size: 2rem;
+    padding: 0.7rem;
+    border-radius: 0.3rem;
+    text-transform: uppercase;
+}
+
+.checkbtn {
+    font-size: 3rem;
+    color: white;
+    float: right;
+    line-height: 8rem;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media all and (max-width:768px) {
+    label.logo {
+        font-size: 3rem;
+    }
+}
+
+@media all and (max-width:768px) {
+    .contenedor_nav {
+        width: 90%;
+    }
+}
+
+@media all and (max-width:400px) {
+    .contenedor_barraNavegacion {
+        padding: 0 1rem;
+        height: 65%;
+    }
+    .contenedor_nav {
+        width: 100%
+    }
+    .checkbtn {
+        display: block;
+    }
+    .lista_links {
+        position: absolute;
+        background: var(--color-primario);
+        padding-right: 2rem;
+        top: 4.6rem;
+        text-align: center;
+        opacity: 0;
+    }
+    nav .lista_links .links {
+        display: block;
+        margin: 1rem 0;
+        line-height: 1rem;
+    }
+    nav .lista_links .links i {
+        font-size: 2.5rem;
+    }
+    a:hover,
+    a.active {
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked~.lista_links {
+        left: auto;
+        right: 0;
+        opacity: 1;
+        transition-property: opacity;
+        transition-duration: 0.8s;
+    }
+    #icono-user,
+    #icono-home {
+        display: inline-block;
+        margin-right: 0.5rem;
+    }
+    .contenedor_nav h4 {
+        display: inline-block;
+    }
+    .salir {
+        display: inline-block;
+    }
+}

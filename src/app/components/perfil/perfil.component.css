@@ -1,0 +1,92 @@
+article {
+    background-image: url("src/images/Perfil.jpg");
+    width: 100%;
+}
+
+.contenedor_principal {
+    color: var(--color-letras);
+    width: 75%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.contenedor_perfil {
+    width: 90%;
+    height: 95%;
+    background-color: white;
+    font-family: var(--fuente-default);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contenedor_listas_de_alimentos_perfil {
+    width: 100%;
+    padding: 0 1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lista {
+    width: 48%
+}
+
+.botones_acciones {
+    padding: 0 1rem;
+}
+
+.botones_acciones {
+    margin: 1rem 0rem 1rem 0rem;
+    display: flex;
+}
+
+.botones_acciones input {
+    color: white;
+    height: 4rem;
+    width: 10rem;
+    margin-left: 1rem;
+    background-color: var(--color-primario);
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid var(--color-primario);
+}
+
+.botones_acciones .btn_cancelar {
+    background-color: white;
+    border: solid red;
+    color: red;
+}
+
+.botones_acciones input[type="submit"]:hover {
+    cursor: pointer;
+    background: #f0324b;
+    color: white;
+    font-weight: bold;
+}
+
+@media all and (max-width:768px) {
+    .contenedor_principal {
+        height: 95%;
+        width: 100%;
+    }
+}
+
+@media all and (max-width:450px) {
+    .contenedor_perfil {
+        width: 95%;
+    }
+    .lista {
+        width: 100%
+    }
+    .listas_de_alimentos {
+        width: 100%;
+    }
+    .contenedor_listas_de_alimentos_perfil {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,48 @@
+.nombreColumna {
+    background: var(--color-primario);
+    color: var(--color-secundario);
+    border: 1px solid var(--color-primario);
+    font-size: 1.6rem;
+    line-height: 3.1rem;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.lista {
+    width: 100%;
+    max-height: 30rem;
+    background-color: white;
+    list-style: none;
+    overflow: auto;
+    text-indent: 1rem;
+    border: 0.5px solid var(--color-primario);
+}
+
+.lista button {
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 3.1rem;
+    display: flex;
+    justify-content: center;
+    border: 0.5px solid var(--color-primario);
+}
+
+.seleccionado{
+    background-color: var(--color-primario);
+    color: white;
+}
+
+@media all and (max-width:768px) {
+    .lista {
+        height: 80%;
+    }
+}
+
+@media all and (max-width:400px) {
+    .nombreColumna {
+        position: static;
+    }
+}

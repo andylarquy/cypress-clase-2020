@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<div class="receta__clasificacion">
+    <div class="receta__clasificacion--calorias">
+        <label for="cantCalorias">Total de calorias</label>
+        <input [readonly]="recetaChild.autorUserName != usuarioLogueado.userName" #calorias="ngModel" type="text" id="cantCalorias" name="cantCalorias" [(ngModel)]="recetaChild.calorias">
+    </div>
+    <div *ngIf="calorias.invalid && (calorias.dirty || calorias.touched)" class="contenedor_error">
+        <div class="alert">
+            <span *ngIf="calorias.errors.required">Debe ingresar las calorias!</span>
+        </div>
+    </div>
+    <div *ngIf="recetaChild.autorUserName == usuarioLogueado.userName" class="receta__clasificacion--dificultad">
+        <label for="dificultades">Dificultad</label>
+        <select [ngModel]="dificultadSeleccionada" (ngModelChange)="onChange($event)" id="dificultades">
+            <option [value]="i" *ngFor="let i of dificultades" >{{i}}</option>
+        </select>
+    </div>
+    <div *ngIf="recetaChild.autorUserName != usuarioLogueado.userName" class="receta__clasificacion--dificultad">
+        <label for="dificultades">Dificultad</label>
+        <h1 id="dificultades">{{recetaChild.dificultad.tipo}}</h1>
+    </div>
+</div>

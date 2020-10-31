@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de recetas</title>
+    <link rel="stylesheet" href="CSS/Iconos.css">
+    <link rel="stylesheet" href="CSS/BarraNavegacion.css">
+    <link rel="stylesheet" href="CSS/Footer.css">
+    <link rel="stylesheet" href="CSS/General.css">
+    <link rel="stylesheet" href="CSS/BusquedaRecetas.css">
+    <script src="https://kit.fontawesome.com/9d97bb63eb.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main>
+        <nav class="contenedor_barraNavegacion">
+            <div class="contenedor_nav">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars" id="icono-barras"></i>
+                </label>
+                <label class="logo">Food Overflow</label>
+                <ul class="lista_links">
+                    <li class="links">
+                        <i class="fas fa-home" id="icono-home"></i>
+                        <a href="busquedaRecetas.html">Home</a>
+                    </li>
+                    <li class="links">
+                        <i class="fas fa-user" id="icono-user"></i>
+                        <a href="Perfil.html">Perfil</a>
+                    </li>
+                    <li class="links">
+                        <a href="Login.html"><i class="fas fa-sign-out-alt" id="icono-logout"></i></a>
+                        <a class="salir" href="Login.html">Salir</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="fondo">
+            <header>
+                <div class="buscador-container">
+                    <div class="buscador">
+                        <h1>Búsqueda de Recetas</h1>
+                        <form class="search-bar">
+                            <input type="search" placeholder="">
+                            <input type="submit" value="Buscar">
+                            <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                        </form>
+                        <div class="soloMisRecetas">
+                            <input type="checkbox">
+                            <p>Sólo mis recetas</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <article>
+
+                <div class="resultados-container">
+                    <div class="resultados">
+                        <h1>Resultados de la Búsqueda</h1>
+                        <div class="grilla">
+                            <div class="resultados-element receta-propia">
+                                <img src="./images/pollo.jpeg" class="foto_redonda_receta">
+                                <div class="receta-datos">
+                                    <div class="receta-titulo">
+                                        Pollo al horno
+                                    </div>
+                                    <div class="receta-descripcion">
+                                        <div class="receta-descripcion_info">
+                                            <p>Calorías: 200</p>
+                                            <p>Dificultad: Media</p>
+                                        </div>
+                                        <div class="receta-descripcion_info">
+                                            <i class="far fa-edit"></i>
+                                            <!-- <i class="far fa-trash-alt"></i> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="resultados-element">
+                                <img src="./images/raviolesFileto.jpeg" class="foto_redonda_receta">
+                                <div class="receta-datos">
+                                    <div class="receta-titulo">
+                                        Ravioles fileto
+                                    </div>
+                                    <div class="receta-descripcion">
+                                        <div class="receta-descripcion_info">
+                                            <p>Calorías: 200</p>
+                                            <p>Dificultad: Baja</p>
+                                        </div>
+                                        <div class="receta-descripcion_info">
+                                            <!-- <i class="far fa-edit" hidden></i> -->
+                                            <!-- <i class="far fa-trash-alt"></i> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="resultados-element receta-propia">
+                                <img src="../images/asadoAlAsador.jpeg" class="foto_redonda_receta">
+                                <div class="receta-datos">
+                                    <div class="receta-titulo">
+                                        Focaccia
+                                    </div>
+                                    <div class="receta-descripcion">
+                                        <div class="receta-descripcion_info">
+                                            <p>Calorías: 200</p>
+                                            <p>Dificultad: Media</p>
+                                        </div>
+                                        <div class="receta-descripcion_info">
+                                            <i class="far fa-edit"></i>
+                                            <i class="far fa-trash-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="resultados-element receta-propia">
+                                <img src="./images/asadoAlAsador.jpeg" class="foto_redonda_receta">
+                                <div class="receta-datos">
+                                    <div class="receta-titulo">
+                                        Asado al asador
+                                    </div>
+                                    <div class="receta-descripcion">
+                                        <div class="receta-descripcion_info">
+                                            <p>Calorías: 300</p>
+                                            <p>Dificultad: Alta</p>
+                                        </div>
+                                        <div class="receta-descripcion_info">
+                                            <i class="far fa-edit"></i>
+                                            <i class="far fa-trash-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="resultados-element">
+                                <img src="./images/buseca.jpeg" class="foto_redonda_receta">
+                                <div class="receta-datos">
+                                    <div class="receta-titulo">
+                                        Buseca
+                                    </div>
+                                    <div class="receta-descripcion">
+                                        <div class="receta-descripcion_info">
+                                            <p>Calorías: 300</p>
+                                            <p>Dificultad: Alta</p>
+                                        </div>
+                                        <div class="receta-descripcion_info">
+                                            <!-- <i class="far fa-edit" hidden></i> -->
+                                            <!-- <i class="far fa-trash-alt"></i> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="resultados-element">
+                                <img src="./images/risotto.jpeg" class="foto_redonda_receta">
+                                <div class="receta-datos">
+                                    <div class="receta-titulo">
+                                        Risotto
+                                    </div>
+                                    <div class="receta-descripcion">
+                                        <div class="receta-descripcion_info">
+                                            <p>Calorías: 300</p>
+                                            <p>Dificultad: Alta</p>
+                                        </div>
+                                        <div class="receta-descripcion_info">
+                                            <!-- <i class="far fa-edit" hidden></i> -->
+                                            <!-- <i class="far fa-trash-alt"></i> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="resultados-element receta-propia">
+                                <img src="./images/guisoDeLentejas.jpeg" class="foto_redonda_receta">
+                                <div class="receta-datos">
+                                    <div class="receta-titulo">
+                                        Guiso de lentejas
+                                    </div>
+                                    <div class="receta-descripcion">
+                                        <div class="receta-descripcion_info">
+                                            <p>Calorías: 520</p>
+                                            <p>Dificultad: Media</p>
+                                        </div>
+                                        <div class="receta-descripcion_info">
+                                            <i class="far fa-edit"></i>
+                                            <i class="far fa-trash-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="icono-plus">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <footer class="contenedor_footer">
+            <div class="footer">
+                <div class="descripcion_footer">
+                    <a class="fab fa-facebook-square" id="logo-facebook"></a>
+                    <p class="foodoverflow_footer" data-description="Grupo 4.&copy;All rights reserved.">
+                        Food Overflow \ 2020.</p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+</body>
+
+</html>

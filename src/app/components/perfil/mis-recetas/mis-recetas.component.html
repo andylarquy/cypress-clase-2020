@@ -1,0 +1,11 @@
+<div class="contenedor_mis_recetas">
+    <h1>Mis recetas</h1>
+    <div class="misRecetas" *ngIf="recetas.length > 0">
+        <app-tarjeta-receta *ngFor="let receta of recetas" [recetaChild]="receta" (cambio)="recetaEliminadaEvent()"></app-tarjeta-receta>
+    </div>
+</div>
+<div class = "contenedor_error">
+    <h2 *ngIf="recetas.length === 0" class="alert">
+        No tienes recetas propias!
+    </h2>
+</div>

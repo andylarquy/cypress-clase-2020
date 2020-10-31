@@ -1,0 +1,30 @@
+.botones_acciones {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.botones_acciones input {
+    color: var(--color-letras);
+    height: 4rem;
+    width: 10rem;
+    margin-left: 1rem;
+    background-color: var(--color-terciario);
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid var(--color-primario);
+}
+
+.botones_acciones .btn_cancelar {
+    background-color: rgb(167, 44, 44);
+    color: white;
+}
+
+.botones_acciones input[type="submit"]:hover {
+    cursor: pointer;
+    background: var(--color-primario);
+    color: white;
+    font-weight: bold;
+}

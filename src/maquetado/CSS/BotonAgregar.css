@@ -1,0 +1,31 @@
+button {
+    height: 3rem;
+    width: 6rem;
+    border: 0.1rem solid var(--color-primario);
+    background-color: var(--color-terciario);
+    color: black;
+    border-radius: 0.5rem;
+}
+
+.btn_agregar::after {
+    content: "Agregar";
+}
+
+.btn_agregar:hover {
+    font-weight: bold;
+    background-color: var(--color-primario);
+    color: white;
+}
+
+@media all and (max-width:400px) {
+    .btn_agregar {
+        width: 4rem;
+        background-color: var(--color-primario);
+    }
+    .btn_agregar::after {
+        font-family: fontAwesome;
+        content: "\f055";
+        font-size: 2rem;
+        color: white;
+    }
+}

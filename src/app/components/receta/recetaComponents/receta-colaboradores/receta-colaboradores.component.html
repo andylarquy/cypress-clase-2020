@@ -1,0 +1,23 @@
+<div class="receta__colaboradores">
+    <div class="receta__colaboradores--titulo">
+        <h2 style="font-size: 2rem;">Colaboradores</h2>
+        <a routerLink="/colaboradores">
+            <app-boton-agregar *ngIf="recetaChild.autorUserName == usuarioLogueado.userName"></app-boton-agregar>
+        </a>
+    </div>
+    <div class="receta__colaboradores--lista">
+        <ul>
+            <li class="nombreColumna">
+                <h2>Nombre</h2>
+            </li>
+            <li *ngFor="let colaborador of recetaChild.colaboradores">
+                <h4 class="item_lista">{{colaborador.nombre}}</h4>
+                <a class="item_lista_cruz"></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<h1 *ngIf="recetaChild.colaboradores.length === 0" class="alert">
+    La receta no tiene colaboradores!
+</h1>

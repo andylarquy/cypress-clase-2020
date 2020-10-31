@@ -1,0 +1,24 @@
+<main>
+    <app-nav></app-nav>
+    <article>
+        <div class="contenedor_principal">
+            <h1>Proceso de preparacion</h1>
+            <div class="contenedor_cantidades">
+                <div class="label_input_cantidades">
+                    <label for="Cantidad">Descripcion</label>
+                    <div class="input_cantidades">
+                        <input type="text" id="Cantidad" name="Cantidad" [(ngModel)]="paso">
+                    </div>
+                </div>
+            </div>
+            <div class="alert" *ngFor="let error of errores">{{error}}</div>
+            <div class="contenedor_botones_acciones">
+                <div class="botones_acciones">
+                    <input type="submit" value="Aceptar" class="btn_aceptar" (click)=agregarPaso()>
+                    <input type="submit" value="Cancelar" class="btn_cancelar" (click)=volver()>
+                </div>
+            </div>
+        </div>
+    </article>
+    <app-footer></app-footer>
+</main>

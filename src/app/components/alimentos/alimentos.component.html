@@ -1,0 +1,26 @@
+<main>
+    <app-nav></app-nav>
+    <article>
+        <div class="contenedor_principal">
+            <h1>Alimentos</h1>
+            <div class="contenedor_listaAlimentos">
+                <ul class="lista">
+                    <li class="nombreColumna">
+                        <h3>Alimento</h3>
+                    </li>
+                    <button [ngClass]="alimento === alimentoSeleccionado ? 'seleccionado' : ''" *ngFor="let alimento of alimentos| orderAlimentos" (click)=seleccionarAlimento(alimento)>
+                            {{alimento.nombre}}
+                    </button>
+                </ul>
+            </div>
+            <div class="alert" *ngFor="let error of errores">{{error}}</div>
+            <div class="contenedor_botones_acciones">
+                <div class="botones_acciones">
+                    <input type="submit" value="Aceptar" class="btn_aceptar" (click)=asignarAlimento()>
+                    <input type="submit" value="Cancelar" class="btn_cancelar" (click)=cancelar()>
+                </div>
+            </div>
+        </div>
+    </article>
+    <app-footer></app-footer>
+</main>

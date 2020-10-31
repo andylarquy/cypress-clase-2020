@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+html {
+    font-size: 10px;
+}
+
+:root {
+    --color-primario: #c72c41;
+    --color-secundario: white;
+    --color-terciario: #fad2b8;
+    --color-cuarto: rgb(255, 235, 225);
+    --color-footer: #414141;
+    --color-letras: #251F44;
+    --color-boton-buscar: #fd933c;
+    --ancho-default: 100%;
+    --fontfamily-foodoverflow: 'Lobster Two', cursive;
+    --fuente-default: 'Ubuntu', sans-serif;
+}
+
+body {
+    background-color: var( --color-terciario);
+    font-family: var(--fuente-default);
+}
+
+main {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 6fr 1fr;
+    grid-template-areas: "nav" "article" "footer";
+}
+
+article {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start
+}

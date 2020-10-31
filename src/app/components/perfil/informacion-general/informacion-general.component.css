@@ -1,0 +1,57 @@
+.contenedor_informacion_general_perfil {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0 1rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.contenedor_informacion_general_perfil input, select {
+    height: 2.5rem;
+    width: 65%;
+    border: none;
+    border-bottom: 1px solid grey;
+    padding-left: 0.5rem;
+    background: transparent;
+    outline: none;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.contenedor_informacion_general_perfil input:focus, select:focus {
+    box-shadow: inset 0px -40px 30px -30px rgba(212, 9, 9, 0.199);
+}
+
+.peso_nacimiento {
+    display: flex;
+    height: 8rem;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.estatura_rutina {
+    display: flex;
+    height: 8rem;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.datos_perfil {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor_error{
+    display: flex;
+    justify-content:flex-end;
+}
+
+@media all and (max-width:450px) {
+    .contenedor_informacion_general_perfil {
+        flex-direction: column;
+    }
+    .datos_perfil input {
+        height: 2.8rem;
+    }
+}

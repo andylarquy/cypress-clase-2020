@@ -1,0 +1,36 @@
+<main>
+    <app-nav></app-nav>
+    <article>
+        <div class="fondo">
+            <header>
+                <div class="buscador-container">
+                    <div class="buscador">
+                        <h1>Búsqueda de Recetas</h1>
+                        <form class="search-bar">
+                            <input type="search" placeholder="Ingrese el titulo de la receta" [(ngModel)]="recetaABuscar" [ngModelOptions]="{standalone: true}">
+                            <input type="submit" value="Buscar">
+                            <button type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                        </form>
+                        <div class="soloMisRecetas">
+                            <input type="checkbox" id="soloMisRecetas" (click)="soloMisRecetas()">
+                            <p>Sólo mis recetas</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="resultados-container ">
+                <div class="resultados ">
+                    <div class="grilla">
+                        <app-tarjeta-receta *ngFor="let receta of recetas | recetaFilter : recetaABuscar" [recetaChild]="receta" (cambio)="recetaEliminadaEvent()"></app-tarjeta-receta>
+                    </div>
+                    <div class="icono-plus ">
+                        <i class="fas fa-plus-circle" (click)="crearNuevaReceta()"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+        <app-footer></app-footer>
+</main>

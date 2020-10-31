@@ -1,0 +1,28 @@
+table {
+    padding-right: 1%;
+    /*table-layout: fixed;*/
+    width: 100%;
+    font-size: 1.5rem;
+
+}
+
+.tabla__filaTitulo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    align-items: center;
+    
+}
+
+td{
+    border: 2px solid var(--color-primario);
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+}
+
+
+.tabla__columnaDetalle--eliminar {
+    text-align: end;
+    color: red;
+    cursor: pointer;
+}

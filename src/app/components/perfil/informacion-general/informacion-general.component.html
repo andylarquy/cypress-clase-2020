@@ -1,0 +1,34 @@
+<div class="contenedor_informacion_general_perfil">
+    <div class="peso_nacimiento">
+        <div class="datos_perfil">
+            <label for="Peso">Peso(Kgs)</label>
+            <input type="number" name="Peso" required pattern="[0-9]+([\.,][0-9]+)?" #peso="ngModel" [(ngModel)]="usuarioLogueado.peso">
+        </div>
+        <div *ngIf="peso.invalid && (peso.dirty || peso.touched)" class="contenedor_error">
+            <div class="alert">
+                <span *ngIf="peso.errors.required">Debe ingresar un peso!</span>
+            </div>
+        </div>
+        <div class="datos_perfil">
+            <label for="Nacimiento">Nacimiento</label>
+            <input type="date" name="Nacimiento" [(ngModel)]="usuarioLogueado.fechaNacimiento">
+        </div>
+    </div>
+    <div class="estatura_rutina">
+        <div class="datos_perfil">
+            <label for="Estatura">Estatura</label>
+            <input type="number" name="Estatura" required pattern="[0-9]+([\.,][0-9]+)?" min="1" #estatura="ngModel" [(ngModel)]="usuarioLogueado.estatura">
+        </div>
+        <div *ngIf="estatura.invalid && (estatura.dirty || estatura.touched)" class="contenedor_error">
+            <div class="alert">
+                <span *ngIf="estatura.errors.required">Debe ingresar una estatura!</span>
+            </div>
+        </div>
+        <div class="datos_perfil">
+            <label for="rutina">Rutina</label>
+            <select [(ngModel)]="usuarioLogueado.rutina" name="rutina"> 
+                <option *ngFor="let rutina of tiposDeRutinas" [ngValue]="rutina">{{rutina.nombre}}</option>
+            </select>
+        </div>
+    </div>
+</div>

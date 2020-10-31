@@ -1,0 +1,35 @@
+.fa-times-circle {
+    color: rgb(255, 0, 0);
+    font-size: 2rem;
+}
+
+.fa-times-circle:hover {
+    color: rgb(238, 132, 132);
+    cursor: pointer;
+}
+
+.icono-plus {
+    position: fixed;
+    bottom: 10%;
+    width: var(--ancho-default);
+    font-size: 45px;
+    color: var(--color-primario);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 1rem;
+}
+
+.icono-plus i:hover {
+    color: var(--color-boton-buscar);
+    cursor: pointer;
+}
+
+@media all and (min-width: 769px) {
+    .icono-plus {
+        padding: 0rem;
+    }
+    .descripcion_footer {
+        width: var(--ancho-default);
+    }
+}

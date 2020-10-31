@@ -1,0 +1,198 @@
+main {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 6fr 1fr;
+    grid-template-areas: "contenido" "footer";
+}
+
+article {
+    background-image: url("../images/Login_Fondo.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.contenedor-loginbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginbox {
+    width: 40rem;
+    height: 32rem;
+    /* background: var(--color-secundario); */
+    padding: 1rem 3rem;
+    border-radius: 1.5rem;
+}
+
+.titulo-loginbox {
+    color: var(--color-primario);
+    margin-bottom: 1rem;
+    font-size: 5rem;
+    text-align: center;
+    font-family: var(--fontfamily-foodoverflow);
+}
+
+.loginbox label {
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: var(--fuente-default);
+    color: var(--color-letras);
+}
+
+.loginbox input[type="text"],
+input[type="password"] {
+    width: 100%;
+    height: 2.8rem;
+    margin-bottom: 2rem;
+    border: 0.1rem solid var(--color-primario);
+    padding-left: 0.5rem;
+}
+
+.loginbox input[type="password"] {
+    margin-bottom: 2rem;
+}
+
+.loginbox_remember-forgot {
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.loginbox_remember label {
+    color: black;
+    font-weight: unset;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+.loginbox_forgot {
+    text-decoration: none;
+    color: black;
+    font-size: 1.6rem;
+}
+
+.loginbox_forgot:hover {
+    text-decoration: none;
+    color: var(--color-primario);
+    font-size: 1.6rem;
+}
+
+.loginbox input[type="submit"] {
+    margin: auto;
+    height: 4rem;
+    width: 100%;
+    background-color: var(--color-terciario);
+    font-size: 1.8rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid var(--color-primario);
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.loginbox input[type="submit"]:hover {
+    cursor: pointer;
+    background: var(--color-primario);
+    color: var(--color-secundario);
+    font-weight: bold;
+}
+
+@media all and (max-width:768px) {
+    .loginbox {
+        width: 43rem;
+        height: 35rem;
+    }
+    .titulo-loginbox {
+        font-size: 6rem;
+    }
+    .loginbox label {
+        font-size: 2.2rem;
+    }
+    .loginbox input {
+        height: 2.8rem;
+    }
+    .loginbox_remember-forgot {
+        width: 100%;
+        height: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        justify-items: flex-start;
+    }
+    .loginbox_remember {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .loginbox_remember label {
+        font-size: 1.8rem;
+        padding-left: 0.2rem;
+        margin: 0;
+    }
+    .loginbox input[type="password"] {
+        margin-bottom: 0.8rem;
+    }
+    .loginbox_forgot {
+        width: 100%;
+        font-size: 1.8rem;
+    }
+    .loginbox input[type="submit"] {
+        height: 4rem;
+        width: 100%;
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+}
+
+@media all and (max-width:400px) {
+    .loginbox {
+        width: 35rem;
+        height: 25rem;
+        margin-bottom: 10rem;
+        margin-right: 1rem;
+    }
+    .titulo-loginbox {
+        font-size: 4.5rem;
+    }
+    .loginbox label {
+        font-size: 1.8rem;
+    }
+    .loginbox input {
+        height: 2.8rem;
+    }
+    .loginbox_remember-forgot {
+        width: 100%;
+        height: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        justify-items: flex-start;
+    }
+    .loginbox_remember {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .loginbox_remember label {
+        font-size: 1.5rem;
+        padding-left: 0.2rem;
+        margin: 0;
+    }
+    .loginbox input[type="password"] {
+        margin-bottom: 0.8rem;
+    }
+    .loginbox_forgot {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+    .loginbox input[type="submit"] {
+        height: 4rem;
+        width: 100%;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+}

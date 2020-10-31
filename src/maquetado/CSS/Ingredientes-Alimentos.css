@@ -1,0 +1,138 @@
+main {
+    background-image: url("../images/Fondo_Alimentos3.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+article {
+    align-items: center;
+}
+
+.contenedor_principal {
+    width: 70%;
+    height: 80%;
+    font-family: var(--fuente-default);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contenedor_principal h1 {
+    height: 15%;
+    font-family: var(--fontfamily-foodoverflow);
+    margin-bottom: 1.5rem;
+    font-size: 6rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor_listaAlimentos {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lista {
+    width: 70%;
+    height: 100%;
+}
+
+li {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.contenedor_cantidades {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.label_input_cantidades {
+    width: 70%;
+}
+
+.label_input_cantidades label {
+    color: white;
+    font-family: var(--fontfamily-foodoverflow);
+    font-size: 2rem;
+    width: 100%;
+    font-weight: bold;
+}
+
+.label_input_cantidades input[type="text"] {
+    width: 100%;
+    height: 2.5rem;
+    padding-left: 0.5rem;
+    border: solid 0.1rem var(--color-primario);
+    border-radius: 0.5rem;
+}
+
+.contenedor_botones_acciones {
+    height: 15%;
+    display: flex;
+    justify-content: center;
+}
+
+.botones_acciones {
+    width: 70%;
+}
+
+@media all and (max-width:768px) {
+    .contenedor_principal {
+        height: 55%;
+        width: 90%;
+    }
+    .lista {
+        width: 90%;
+        height: 85%;
+    }
+    .label_input_cantidades {
+        width: 90%;
+    }
+    .botones_acciones {
+        width: 90%;
+    }
+}
+
+@media all and (max-width:400px) {
+    .contenedor_barraNavegacion {
+        height: 65%;
+    }
+    .barraNavegacion {
+        font-size: 2.5rem;
+    }
+    .contenedor_principal {
+        height: 100%;
+        width: 90%;
+    }
+    .contenedor_principal h1 {
+        margin-bottom: 0;
+    }
+    .contenedor_listaAlimentos {
+        height: 65%;
+        padding: 1rem 0rem;
+    }
+    .lista {
+        width: 90%;
+        max-height: 30rem;
+    }
+    .label_input_cantidades {
+        width: 90%;
+    }
+    .botones_acciones {
+        width: 90%;
+    }
+    .nombreColumna {
+        position: static;
+    }
+}

@@ -1,0 +1,58 @@
+.contenedor_mis_recetas {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor_mis_recetas h1 {
+    width: 100%;
+    font-size: 2rem;
+    padding: 0 1rem;
+}
+
+.contenedor_mis_recetas h2 {
+    width: 100%;
+    font-size: 1.8rem;
+}
+
+.misRecetas {
+    width: 100%;
+    padding-top: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+@media all and (max-width:450px) {
+    .misRecetas {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .contenedor_mis_recetas h1 {
+        display: flex;
+        justify-content: center;
+    }
+    .error {
+        width: 100%
+    }
+}
+
+.contenedor_error {
+    display: flex;
+    justify-content: center;
+}
+
+.error {
+    width:60%;
+    font-weight: initial;
+    background-color: #f8d7da;
+    border-radius: 1rem;
+    color:red;
+    border: 0.1rem solid red;
+    text-align: center;
+    padding: .75rem 1.25rem;
+}
+

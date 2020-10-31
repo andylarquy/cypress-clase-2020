@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receta</title>
+    <link rel="stylesheet" href="CSS/Listas.css">
+    <link rel="stylesheet" href="CSS/Iconos.css">
+    <link rel="stylesheet" href="CSS/BotonAgregar.css">
+    <link rel="stylesheet" href="CSS/BotonesAceptarCancelar.css">
+    <link rel="stylesheet" href="CSS/BarraNavegacion.css">
+    <link rel="stylesheet" href="CSS/Footer.css">
+    <link rel="stylesheet" href="CSS/General.css">
+    <link rel="stylesheet" href="CSS/receta.css">
+    <script src="https://kit.fontawesome.com/9d97bb63eb.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="backgroundImage">
+        <nav class="contenedor_barraNavegacion">
+            <div class="contenedor_nav">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars" id="icono-barras"></i>
+                </label>
+                <label class="logo">Food Overflow</label>
+                <ul class="lista_links">
+                    <li class="links">
+                        <i class="fas fa-home" id="icono-home"></i>
+                        <a href="busquedaRecetas.html">Home</a>
+                    </li>
+                    <li class="links">
+                        <i class="fas fa-user" id="icono-user"></i>
+                        <a href="Perfil.html">Perfil</a>
+                    </li>
+                    <li class="links">
+                        <a href="Login.html"><i class="fas fa-sign-out-alt" id="icono-logout"></i></a>
+                        <a class="salir" href="Login.html">Salir</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <article>
+            <div class="contenedor__receta">
+                <div class="contenedor__titulo">
+                    <div class="contenedor__titulo--foto">
+                        <img src="./images/guisoDeLentejas.jpeg">
+                    </div>
+                    <div class="contenedor__titulo--texto">
+                        <h2>Guiso de lentejas</h2>
+                        <p>por Juan Carlos de la Hoya</p>
+                        <p>Inadecuado para Veganos, vegetarianos, hipertensos</p>
+                    </div>
+                </div>
+
+                <div class="contenedor__contenidoReceta">
+                    <div class="receta__clasificacion">
+                        <div class="receta__clasificacion--calorias">
+                            <label for="cantCalorias">Total de calorias</label>
+                            <input type="text" id="cantCalorias" name="cantCalorias">
+                        </div>
+                        <div class="receta__clasificacion--dificultad">
+                            <label for="dificultades">Dificultad</label>
+                            <select id="dificultades">
+                                <option value="facil">Fácil</option>
+                                <option value="media">Media</option>
+                                <option value="dificil">Difícil</option>
+					        </select>
+                        </div>
+                    </div>
+
+
+                    <div class="receta__detalle">
+
+                        <table class="tablaIngredientes">
+                            <tr class="tabla__filaTitulo">
+                                <th class="tabla__filaTitulo--texto">
+                                    <h2>Ingredientes</h2>
+                                </th>
+                                <th colspan="2" class="tabla__filaTitulo--boton">
+                                    <a href="Ingredientes.html"><button type="button" class="btn_agregar"></button></a>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="tablaIngredientes__columnaDetalle--alimento">Carne</td>
+                                <td class="tablaIngredientes__columnaDetalle--cantidad">1/2 kilo</td>
+                                <td class="tabla__columnaDetalle--eliminar">
+                                    <a href=""><i class="fas fa-times-circle"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablaIngredientes__columnaDetalle--alimento">Cebolla</td>
+                                <td class="tablaIngredientes__columnaDetalle--cantidad">2 unidades</td>
+                                <td class="tabla__columnaDetalle--eliminar">
+                                    <a href=""><i class="fas fa-times-circle"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablaIngredientes__columnaDetalle--alimento">Ajo</td>
+                                <td class="tablaIngredientes__columnaDetalle--cantidad">1 diente</td>
+                                <td class="tabla__columnaDetalle--eliminar">
+                                    <a href=""><i class="fas fa-times-circle"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablaIngredientes__columnaDetalle--alimento">Panceta</td>
+                                <td class="tablaIngredientes__columnaDetalle--cantidad">100 gr.</td>
+                                <td class="tabla__columnaDetalle--eliminar">
+                                    <a href=""><i class="fas fa-times-circle"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablaIngredientes__columnaDetalle--alimento">Papas</td>
+                                <td class="tablaIngredientes__columnaDetalle--cantidad">3 unidades</td>
+                                <td class="tabla__columnaDetalle--eliminar">
+                                    <a href=""><i class="fas fa-times-circle"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablaIngredientes__columnaDetalle--alimento">Aceite</td>
+                                <td class="tablaIngredientes__columnaDetalle--cantidad">2 cditas.</td>
+                                <td class="tabla__columnaDetalle--eliminar">
+                                    <a href=""><i class="fas fa-times-circle"></i></a>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <table class="tablaPasos">
+                            <tr class="tabla__filaTitulo">
+                                <th class="tabla__filaTitulo--texto">
+                                    <h2>Pasos</h2>
+                                </th>
+                                <th colspan="2" class="tabla__filaTitulo--boton">
+                                    <button type="button" class="btn_agregar"></button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="tablaPasos__columnaDetalle--numeracion">1</td>
+                                <td class="tablaPasos__columnaDetalle--paso">Remojar las lentejas durante 24hs.</td>
+                                <td class="tabla__columnaDetalle--eliminar">
+                                    <a href=""><i class="fas fa-times-circle"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablaPasos__columnaDetalle--numeracion">2</td>
+                                <td class="tablaPasos__columnaDetalle--paso">Remojar las lentejas durante 24hs.</td>
+                                <td class="tabla__columnaDetalle--eliminar">
+                                    <a href=""><i class="fas fa-times-circle"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablaPasos__columnaDetalle--numeracion">2</td>
+                                <td class="tablaPasos__columnaDetalle--paso">Cortar la cebolla en cubos.</td>
+                                <td class="tabla__columnaDetalle--eliminar">
+                                    <a href=""><i class="fas fa-times-circle"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablaPasos__columnaDetalle--numeracion">3</td>
+                                <td class="tablaPasos__columnaDetalle--paso">Picar el ajo.</td>
+                                <td class="tabla__columnaDetalle--eliminar">
+                                    <a href=""><i class="fas fa-times-circle"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablaPasos__columnaDetalle--numeracion">4</td>
+                                <td class="tablaPasos__columnaDetalle--paso">Rehogar todo en un sarten.</td>
+                                <td class="tabla__columnaDetalle--eliminar">
+                                    <a href=""><i class="fas fa-times-circle"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablaPasos__columnaDetalle--numeracion">5</td>
+                                <td class="tablaPasos__columnaDetalle--paso">Agregar la panceta y la carne.</td>
+                                <td class="tabla__columnaDetalle--eliminar">
+                                    <a href=""><i class="fas fa-times-circle"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablaPasos__columnaDetalle--numeracion">6</td>
+                                <td class="tablaPasos__columnaDetalle--paso">Luego de 10' agregar el caldo.</td>
+                                <td class="tabla__columnaDetalle--eliminar">
+                                    <a href=""><i class="fas fa-times-circle"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablaPasos__columnaDetalle--numeracion">7</td>
+                                <td class="tablaPasos__columnaDetalle--paso">A la media hora agregar las lentejas.</td>
+                                <td class="tabla__columnaDetalle--eliminar">
+                                    <a href=""><i class="fas fa-times-circle"></i></a>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <div class="receta__colaboradores">
+                            <div class="receta__colaboradores--titulo">
+                                <h2>Colaboradores</h2>
+                                <button type="button" class="btn_agregar"></button>
+                            </div>
+                            <div class="receta__colaboradores--lista">
+                                <ul>
+                                    <li class="nombreColumna">
+                                        <h3>Nombre</h3>
+                                    </li>
+                                    <li>
+                                        <h4 class="item_lista">Rita Curita</h4>
+                                        <a class="item_lista_cruz" href=""><i class="fas fa-times-circle"></i></a>
+                                    </li>
+                                    <li>
+                                        <h4 class="item_lista">Rita Curita</h4>
+                                        <a class="item_lista_cruz" href=""><i class="fas fa-times-circle"></i></a>
+                                    </li>
+                                    <li>
+                                        <h4 class="item_lista">Rita Curita</h4>
+                                        <a class="item_lista_cruz" href=""><i class="fas fa-times-circle"></i></a>
+                                    </li>
+                                    <li>
+                                        <h4 class="item_lista">Rita Curita</h4>
+                                        <a class="item_lista_cruz" href=""><i class="fas fa-times-circle"></i></a>
+                                    </li>
+                                    <li>
+                                        <h4 class="item_lista">Rita Curita</h4>
+                                        <a class="item_lista_cruz" href=""><i class="fas fa-times-circle"></i></a>
+                                    </li>
+                                    <li>
+                                        <h4 class="item_lista">Rita Curita</h4>
+                                        <a class="item_lista_cruz" href=""><i class="fas fa-times-circle"></i></a>
+                                    </li>
+                                    <li>
+                                        <h4 class="item_lista">Rita Curita</h4>
+                                        <a class="item_lista_cruz" href=""><i class="fas fa-times-circle"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="botones_acciones">
+                            <input type="submit" value="Aceptar" class="btn_aceptar">
+                            <input type="submit" value="Cancelar" class="btn_cancelar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+
+        <footer class="contenedor_footer">
+            <div class="footer">
+                <div class="descripcion_footer">
+                    <a class="fab fa-facebook-square" id="logo-facebook"></a>
+                    <p class="foodoverflow_footer" data-description="Grupo 4.&copy;All rights reserved.">
+                        Food Overflow \ 2020.</p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<main>
+    <app-nav></app-nav>
+    <article>
+        <div class="contenedor_principal">
+            <h1>Ingredientes</h1>
+            <div class="contenedor_listaAlimentos">
+                <ul class="lista">
+                    <li class="nombreColumna">
+                        <h3>Alimento</h3>
+                    </li>
+                    <button [ngClass]="alimento === alimentoSeleccionado ? 'seleccionado' : ''" *ngFor="let alimento of alimentos| orderAlimentos" (click)=seleccionarAlimento(alimento)>
+                            {{alimento.nombre}}
+                    </button>
+                </ul>
+            </div>
+            <div class="contenedor_cantidades">
+                <div class="label_input_cantidades">
+                    <label for="Cantidad">Cantidad</label>
+                    <div class="input_cantidades">
+                        <input type="text" id="Cantidad" name="Cantidad" [(ngModel)]="cantidad">
+                    </div>
+                </div>
+            </div>
+            <div class="alert" *ngFor="let error of errores">{{error}}</div>
+            <div class="contenedor_botones_acciones">
+                <div class="botones_acciones">
+                    <input type="submit" value="Aceptar" class="btn_aceptar" (click)=agregarAlimento()>
+                    <input type="submit" value="Cancelar" class="btn_cancelar" (click)=volver()>
+                </div>
+            </div>
+        </div>
+    </article>
+    <app-footer></app-footer>
+</main>

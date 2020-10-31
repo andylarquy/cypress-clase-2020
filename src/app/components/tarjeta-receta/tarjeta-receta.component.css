@@ -1,0 +1,83 @@
+.misRecetas-element {
+    width: 30rem;
+    padding: 0.2rem;
+    margin: 0.5rem;
+    border-radius: 1.2rem;
+    background-color: #f7efea;
+    border-color: #f7efea;
+    font-size: 1.2rem;
+    border-style: solid;
+    display: flex;
+    align-items: center;
+    -webkit-transition: 0.1s linear;
+    transition: 0.3s linear;
+}
+
+.misRecetas-element:hover {
+    -webkit-box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
+    box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
+    border-style: solid;
+    border-width: 4px;
+}
+
+.datos_receta h2:hover {
+    cursor: pointer;
+    color:#ff092a;
+}
+
+.bordered {
+    border-color: var(--color-primario);
+}
+
+.bordered2 {
+    border: none;
+}
+
+.datos_receta {
+    height: 9rem;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.datos_receta h3 {
+    width: 100%;
+    font-size: 1.6rem;
+    font-weight: normal;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dificultad_receta {
+    padding-right: 0.4rem;
+}
+
+.far {
+    color: var(--color-primario);
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.far:hover {
+    color: orange;
+}
+
+.foto_receta {
+    border-radius: 1rem;
+    width: 28%;
+    margin-left: 0.2rem;
+}
+
+@media all and (max-width: 768px) {
+    .misRecetas-element {
+        width: 26rem;
+    }
+}
+
+@media all and (max-width: 400px) {
+    .misRecetas-element {
+        width: 32rem;
+    }
+}

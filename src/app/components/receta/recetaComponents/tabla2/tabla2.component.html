@@ -1,0 +1,19 @@
+<div class="tabla__filaTitulo">
+    <h2 style="font-size: 2rem;">Pasos</h2>
+    <a routerLink="/pasos">
+        <app-boton-agregar *ngIf="recetaChild.autorUserName == usuarioLogueado.userName"></app-boton-agregar>
+    </a>
+</div>
+<table *ngIf="recetaChild.procesoDePreparacion.length > 0">
+    <tr *ngFor="let paso of recetaChild.procesoDePreparacion; let i = index" class="fila">
+        <td>{{i + 1}}.</td>
+        <td>{{paso}}</td>
+        <td class="tabla__columnaDetalle--eliminar" *ngIf="recetaChild.autorUserName == usuarioLogueado.userName">
+            <a ><i  class="fas fa-times-circle" (click)= eliminarPaso(i)></i></a>
+        </td>
+    </tr>
+</table>
+
+<h1 *ngIf="recetaChild.procesoDePreparacion.length === 0" class="alert">
+    La receta no tiene pasos!
+</h1>

@@ -1,0 +1,348 @@
+.backgroundImage{
+    background-image: url("src/images/Fondo_Recetas.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+@media(max-width: 400px){
+    .backgroundImage{
+        height: 100%;
+    }
+}
+@media(min-width: 401px) and (max-width: 1024px) {
+    .backgroundImage {
+        height: 100%;
+    }
+}
+
+.contenedor__receta {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    margin-bottom: 5rem;
+    flex-direction: column;
+}
+
+@media (max-width: 400px){
+    .contenedor__receta{
+        width:90%;
+    } 
+}
+
+.contenedor__titulo {
+    background: var(--color-primario);
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1rem 1rem 0 0;
+    padding-right: 0.5rem;
+}
+
+.contenedor__titulo--foto {
+    width: 10rem;
+    height: auto;
+    display: flex;
+}
+
+.contenedor__titulo--foto img {
+    border-top-left-radius: 1rem;
+    width: inherit;
+}
+
+.contenedor__titulo--texto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.contenedor__titulo--texto {
+    font-size: 1.5rem;
+}
+
+.contenedor__titulo--texto h3,
+p {
+    height: 33%;
+}
+
+.contenedor__contenidoReceta {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 1rem;
+    background: var(--color-secundario);
+    padding: 0 3rem 0 3rem;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.contenedor__contenidoReceta .receta__clasificacion,
+.receta__detalle,
+.receta__colaboradores {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.receta__clasificacion {
+    padding-top: 1rem;
+}
+
+.receta__clasificacion label {
+    font-size: 1.5rem;
+    margin-right: 2rem;
+}
+
+.receta__detalle {
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select {
+    border: 2px solid var(--color-primario);
+    height: 3.5rem;
+    width: 20rem;
+    padding-left: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.receta__clasificacion--dificultad,
+.receta__clasificacion--calorias {
+    display: flex;
+    align-items: center;
+}
+
+.contenedor__contenidoReceta .medio {
+    flex-direction: row;
+}
+
+.receta__colaboradores,
+.receta__botones {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+}
+
+.receta__colaboradores {
+    flex-direction: column;
+}
+
+.img_cruz {
+    height: 3rem;
+    width: 3rem;
+}
+
+.receta__colaboradores--titulo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenidoReceta_lista {
+    margin-top: 0.5rem;
+    border: 1px solid var(--color-terciario);
+    font-family: arial;
+    height: 10rem;
+    width: 100%;
+}
+
+.receta__colaboradores--lista ul {
+    list-style: none;
+    max-height: 10rem;
+    margin-top: 0.5rem;
+    overflow: auto;
+    padding: 0;
+    text-indent: 1rem;
+    border: 1px solid var(--color-terciario);
+}
+
+.receta__colaboradores--lista li {
+    line-height: 3rem;
+    justify-content: center;
+    display: flex;
+    border: 1px solid var(--color-terciario);
+}
+
+.item_lista,
+.item_lista_cruz {
+    display: flex;
+}
+
+.item_lista {
+    font-size: 1.5rem;
+    justify-content: flex-end;
+    flex-grow: 1.45;
+}
+
+.item_lista_cruz {
+    padding-right: 1rem;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1.35;
+}
+
+@media(max-width: 400px) {
+    .item_lista {
+        flex-grow: 1.8;
+    }
+}
+
+@media(min-width: 401px) and (max-width: 768px) {
+    .item_lista {
+        flex-grow: 1.55;
+    }
+}
+
+.botones_acciones {
+    width: 100%;
+}
+
+@media(max-width: 400px) {
+    .contenedor__titulo {
+        height: 9rem;
+        text-align: end;
+        font-size: 1.5rem;
+    }
+    .contenedor__contenidoReceta {
+        padding: 0 0.5rem;
+    }
+    .contenedor__titulo--texto {
+        font-size: 0.9em;
+    }
+    .receta__clasificacion--calorias,
+    .receta__clasificacion--dificultad {
+        width: 100%;
+    }
+    .receta__clasificacion--dificultad {
+        margin-top: 10px;
+    }
+    .receta__clasificacion--calorias label,
+    .receta__clasificacion--dificultad label {
+        width: 35%;
+    }
+    .receta__clasificacion--calorias select,
+    input,
+    .receta__clasificacion--dificultad select,
+    input {
+        width: 65%;
+    }
+    .receta__detalle {
+        flex-direction: column;
+    }
+}
+
+@media(min-width: 401px) and (max-width: 768px) {
+    .contenedor__receta{
+        width: 90%;
+    }
+    .contenedor__titulo {
+        text-align: end;
+    }
+    .receta__clasificacion {
+        flex-wrap: nowrap !important;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    }
+    input,
+    select {
+        width: 16rem;
+    }
+    .receta__detalle {
+        font-size: 1.2em;
+    }
+    .receta__clasificacion--calorias {
+        font-size: 0.9em;
+    }
+    .receta__colaboradores--titulo {
+        margin-top: 5rem;
+    }
+    .receta__colaboradores--lista ul {
+        max-height: 30rem;
+        margin-bottom: 3rem;
+    }
+    .receta__botones {
+        margin-bottom: -6rem;
+        margin-top: 2rem;
+    }
+}
+
+table {
+    padding-right: 1%;
+}
+
+.tablaIngredientes {
+    width: 40%;
+}
+
+.tablaPasos{
+    width: 60%;
+    padding-left: 2%;
+}
+
+
+@media(max-width: 400px) {
+    .tablaIngredientes {
+        width: 100%;
+    }
+
+    .tablaPasos{
+        width:100%;
+    }
+}
+
+.tabla__filaTitulo{
+    padding-bottom: 1rem;
+}
+
+.tabla__filaTitulo--texto {
+    text-align: start;
+}
+.tabla__filaTitulo--boton {
+    text-align: end;
+    padding-bottom: 1rem;
+}
+
+.tablaIngredientes__columnaDetalle--alimento {
+    width: 55%;
+}
+
+@media(min-width: 401px) and (max-width: 768px) {
+    
+    .tablaIngredientes {
+        table-layout:fixed;
+    }
+    .tablaIngredientes__columnaDetalle--alimento {
+        width: 40%;
+    }
+    .tablaIngredientes__columnaDetalle--cantidad {
+        width: 50%;
+    }
+    .tabla__columnaDetalle--eliminar{
+        width: 10%;
+    }
+}
+
+.tablaIngredientes__columnaDetalle--cantidad {
+    width:35%
+}
+
+.tabla__columnaDetalle--eliminar {
+    width:5%;
+    text-align: end;
+}
+
+.tablaPasos__columnaDetalle--numeracion {
+    width: 2%;
+    text-align: start;
+}
+
+.tablaPasos__columnaDetalle--paso{
+    width: 93%;
+}

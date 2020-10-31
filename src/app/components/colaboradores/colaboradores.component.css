@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+main {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 50px 12fr 1fr;
+    grid-template-areas: "nav" "article" "footer";
+}
+
+nav {
+    grid-area: nav;
+}
+
+article {
+    grid-area: article;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("src/images/Alimentos-Ingredientes.jpg");
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.contenedor_principal {
+    width: 70%;
+    font-family: var(--fuente-default);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor_principal h1 {
+    height: 15%;
+    width: 100%;
+    font-family: var(--fontfamily-foodoverflow);
+    font-size: 6rem;
+    margin-bottom: 1rem;
+    color: var(--color-primario);
+    display: flex;
+    align-items: flex-end;
+}
+
+@media all and (max-width:768px) {
+    .contenedor_principal {
+        width: 95%;
+    }
+}
+
+@media all and (max-width:400px) {
+    .contenedor_principal h1 {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.nombreColumna {
+    background: var(--color-primario);
+    color: var(--color-secundario);
+    border: 1px solid var(--color-primario);
+    font-size: 1.6rem;
+    line-height: 3.1rem;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.lista {
+    width: 100%;
+    max-height: 30rem;
+    background-color: white;
+    list-style: none;
+    overflow: auto;
+    text-indent: 1rem;
+    border: 0.5px solid var(--color-primario);
+}
+
+.lista button {
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 3.1rem;
+    display: flex;
+    justify-content: center;
+    border: 0.5px solid var(--color-primario);
+}
+
+.seleccionado{
+    background-color: var(--color-primario);
+    color: white;
+}
+
+@media all and (max-width:768px) {
+    .lista {
+        height: 80%;
+    }
+}
+
+@media all and (max-width:400px) {
+    .nombreColumna {
+        position: static;
+    }
+}

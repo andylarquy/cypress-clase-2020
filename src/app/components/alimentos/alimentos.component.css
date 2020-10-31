@@ -1,0 +1,97 @@
+article {
+    align-items: center;
+    background-image: url("src/images/Alimentos-Ingredientes.jpg");
+}
+
+.contenedor_principal {
+    width: 70%;
+    font-family: var(--fuente-default);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor_principal h1 {
+    height: 15%;
+    width: 100%;
+    font-family: var(--fontfamily-foodoverflow);
+    font-size: 6rem;
+    margin-bottom: 1rem;
+    color: var(--color-primario);
+    display: flex;
+    align-items: flex-end;
+    text-shadow: #f7f3f0 2px 2px 3px;
+}
+
+@media all and (max-width:768px) {
+    .contenedor_principal {
+        width: 95%;
+    }
+}
+
+@media all and (max-width:400px) {
+    .contenedor_principal h1 {
+        width: 100%;
+        justify-content: center;
+    }
+    .label_input_cantidades {
+        width: 90%;
+    }
+}
+
+.botones_acciones {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nombreColumna {
+    background: var(--color-primario);
+    color: var(--color-secundario);
+    border: 1px solid var(--color-primario);
+    font-size: 1.6rem;
+    line-height: 3.1rem;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.lista {
+    width: 100%;
+    max-height: 30rem;
+    background-color: white;
+    list-style: none;
+    overflow: auto;
+    text-indent: 1rem;
+    border: 0.5px solid var(--color-primario);
+}
+
+.lista button {
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 3.1rem;
+    display: flex;
+    justify-content: center;
+    border: 0.5px solid var(--color-primario);
+}
+
+.lista button:focus {
+    background-color: var(--color-primario);
+    color: white;
+}
+
+@media all and (max-width:768px) {
+    .lista {
+        height: 80%;
+    }
+}
+
+@media all and (max-width:400px) {
+    .nombreColumna {
+        position: static;
+    }
+}

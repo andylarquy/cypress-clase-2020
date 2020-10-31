@@ -1,0 +1,78 @@
+article {
+    background-image: url("src/images/Fondo_Recetas.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width: 768px) {
+    article {
+        padding: 1rem 0;
+    }
+}
+
+@media (max-width:400px) {
+    main {
+        grid-template-rows: 45px 50fr 3fr;
+    }
+}
+
+.contenedor__receta {
+    margin: 0.5rem;
+    width: 60%;
+    flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+    .contenedor__receta {
+        width: 95%;
+    }
+}
+
+.contenedor__contenidoReceta {
+    display: flex;
+    flex-wrap: wrap;
+    background: var(--color-secundario);
+    padding: 0 3rem 0 3rem;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.app-receta-clasificacion {
+    width: 100%;
+}
+
+.receta__detalle {
+    width: 100%;
+}
+
+.app-tabla {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+@media(max-width: 400px) {
+    .app-tabla {
+        grid-template-columns: none;
+    }
+}
+
+@media(max-width: 400px) {
+    .contenedor__contenidoReceta {
+        padding: 0 0.5rem;
+    }
+}
+
+.botones_acciones {
+    margin: 1rem 0rem 1rem 0rem;
+    display: flex;
+}
+
+.contenedor_error {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="CSS/Listas.css">
+    <link rel="stylesheet" href="CSS/Iconos.css">
+    <link rel="stylesheet" href="CSS/BotonAgregar.css">
+    <link rel="stylesheet" href="CSS/BotonesAceptarCancelar.css">
+    <link rel="stylesheet" href="CSS/BarraNavegacion.css">
+    <link rel="stylesheet" href="CSS/Footer.css">
+    <link rel="stylesheet" href="CSS/General.css">
+    <link rel="stylesheet" href="CSS/Perfil.css">
+    <script src="https://kit.fontawesome.com/9d97bb63eb.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+
+        <nav class="contenedor_barraNavegacion">
+            <div class="contenedor_nav">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars" id="icono-barras"></i>
+                </label>
+                <label class="logo">Food Overflow</label>
+                <ul class="lista_links">
+                    <li class="links">
+                        <i class="fas fa-home" id="icono-home"></i>
+                        <a href="busquedaRecetas.html">Home</a>
+                    </li>
+                    <li class="links">
+                        <i class="fas fa-user" id="icono-user"></i>
+                        <a href="Perfil.html">Perfil</a>
+                    </li>
+                    <li class="links">
+                        <a href="Login.html"><i class="fas fa-sign-out-alt" id="icono-logout"></i></a>
+                        <a class="salir" href="Login.html">Salir</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <article class="contenedor_principal">
+            <div class="contenedor_perfil">
+                <div class="contenedor_titulo-perfil">
+                    <div class="nombre_imc">
+                        <h1 class="nombre_perfil" data-description="Estado saludable">Juan Carlos de la Hoya<i class="fas fa-heartbeat" id="corazon-nombre"></i></h1>
+                        <h2 class="imc_perfil" data-description="Estado saludable">IMC:30 <i class="fas fa-heartbeat" id="corazon-imc"></i></h2>
+                    </div>
+                </div>
+
+                <div class="contenedor_informacion_general_perfil">
+                    <div class="peso_nacimiento">
+                        <div class="datos_perfil">
+                            <label for="Peso">Peso(Kgs)</label>
+                            <input type="number" name="Peso">
+                        </div>
+                        <div class="datos_perfil">
+                            <label for="Nacimiento">Nacimiento</label>
+                            <input type="date" name="Nacimiento">
+                        </div>
+                    </div>
+
+                    <div class="estatura_rutina">
+                        <div class="datos_perfil">
+                            <label for="Estatura">Estatura</label>
+                            <input type="number" name="Estatura">
+                        </div>
+
+                        <div class="datos_perfil">
+                            <label for="Rutina">Rutina</label>
+                            <select name="Rutina" id="rutinas">
+                                    <option>Leve</option>
+                                    <option>Nada</option>
+                                    <option>Mediano</option>
+                                    <option>Intensiva</option>
+                                    <option>Activa</option>
+                                </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contenedor_condiciones_alimenticias_perfil">
+                    <h2>Condiciones</h2>
+                    <div class="checkbox_condiciones">
+                        <div class="condicion_alimenticia"><input type="checkbox"> Vegetariano</div>
+                        <div class="condicion_alimenticia"><input type="checkbox"> Vegano</div>
+                        <div class="condicion_alimenticia"><input type="checkbox"> Hipertenso</div>
+                        <div class="condicion_alimenticia"><input type="checkbox"> Celiaco</div>
+                        <div class="condicion_alimenticia"><input type="checkbox"> Diabetico</div>
+                    </div>
+                </div>
+
+                <div class="contenedor_listas_de_alimentos_perfil">
+                    <div class="listas_de_alimentos">
+                        <div class="tipo_de_alimentos">
+                            <h2>Alimentos peferidos</h2>
+                            <a href="Alimentos.html"><button type="button" class="btn_agregar"></button></a>
+                        </div>
+                        <div class="listaAlimentos">
+                            <ul class="lista">
+                                <li class="nombreColumna">
+                                    <h3>Alimento</h3>
+                                </li>
+                                <li>
+                                    <h4 class="nombre-alimento">Lentejas</h4>
+                                    <h4 class="cruz-lista"><i class="fas fa-times-circle"></i></h4>
+                                </li>
+                                <li>
+                                    <h4 class="nombre-alimento">Cebolla</h4>
+                                    <h4 class="cruz-lista"><i class="fas fa-times-circle"></i></h4>
+                                </li>
+                                <li>
+                                    <h4 class="nombre-alimento">Atun</h4>
+                                    <h4 class="cruz-lista"><i class="fas fa-times-circle"></i></h4>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="listas_de_alimentos">
+                        <div class="tipo_de_alimentos">
+                            <h2>Alimentos disgustados</h2>
+                            <a href="Alimentos.html"><button type="button" class="btn_agregar"></button></a>
+                        </div>
+                        <div class="listaAlimentos">
+                            <ul class="lista">
+                                <li class="nombreColumna">
+                                    <h3>Alimento</h3>
+                                </li>
+                                <li>
+                                    <h4 class="nombre-alimento">Tomate</h4>
+                                    <h4 class="cruz-lista"><i class="fas fa-times-circle"></i></h4>
+                                </li>
+                                <li>
+                                    <h4 class="nombre-alimento">Arvejas</h4>
+                                    <h4 class="cruz-lista"><i class="fas fa-times-circle"></i></h4>
+                                </li>
+                                <li>
+                                    <h4 class="nombre-alimento">Huevo</h4>
+                                    <h4 class="cruz-lista"><i class="fas fa-times-circle"></i></h4>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="contenedor_mis_recetas">
+                    <h1>Mis recetas</h1>
+                    <div class="misRecetas">
+                        <div class="misRecetas-element">
+                            <img src="./images/pollo.jpeg" class="foto_receta">
+                            <div class="datos_receta">
+                                <h2>Pollo al horno</h2>
+                                <h3 class="calorias_receta"> Calorias:200 <i class="far fa-edit"></i></h3>
+                                <h3 class="dificultad_receta">Dificultad:Media <i class="far fa-trash-alt"></i></h3>
+                            </div>
+                        </div>
+
+                        <div class="misRecetas-element">
+                            <img src="./images/raviolesFileto.jpeg" class="foto_receta">
+                            <div class="datos_receta">
+                                <h2>Ravioles fileto</h2>
+                                <h3 class="calorias_receta"> Calorias:200 <i class="far fa-edit"></i></h3>
+                                <h3 class="dificultad_receta">Dificultad:Media <i class="far fa-trash-alt"></i></h3>
+                            </div>
+                        </div>
+
+                        <div class="misRecetas-element">
+                            <img src="./images/focaccia.jpeg" class="foto_receta">
+                            <div class="datos_receta">
+                                <h2>Focaccia</h2>
+                                <h3 class="calorias_receta"> Calorias:200 <i class="far fa-edit"></i></h3>
+                                <h3 class="dificultad_receta">Dificultad:Media <i class="far fa-trash-alt"></i></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="botones_acciones">
+                    <input type="submit" value="Aceptar" class="btn_aceptar">
+                    <input type="submit" value="Cancelar" class="btn_cancelar">
+                </div>
+            </div>
+
+        </article>
+
+
+        <footer class="contenedor_footer">
+            <div class="footer">
+                <div class="descripcion_footer">
+                    <a class="fab fa-facebook-square" id="logo-facebook"></a>
+                    <p class="foodoverflow_footer" data-description="Grupo 4.&copy;All rights reserved.">
+                        Food Overflow \ 2020.</p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+</body>
+
+</html>

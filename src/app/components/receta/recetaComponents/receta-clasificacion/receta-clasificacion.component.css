@@ -1,0 +1,79 @@
+.receta__clasificacion{
+    width: 100%;
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    align-items: center;
+    justify-content:space-around;
+}
+
+.receta__clasificacion label {
+    font-size: 1.5rem;
+    margin-right: 2rem;
+    font-weight: bold;
+}
+
+.receta__clasificacion--calorias,
+.receta__clasificacion--dificultad{
+    align-items:center;
+    display: flex;
+}
+
+input,
+select {
+    height: 2.5rem;
+    border: none;
+    border-bottom: 1px solid grey;
+    padding-left: 0.5rem;
+    background: transparent;
+    outline: none;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+input:focus,select:focus{
+    box-shadow: inset 0px -40px 30px -30px rgba(212, 9, 9, 0.199);
+}
+
+h1 {
+    border: 2px solid var(--color-primario);
+    width: 8rem;
+    padding-left: 0.5rem;
+    border-radius: 0.5rem;
+    align-items: center;
+}
+
+@media (max-width: 400px){
+    .receta__clasificacion{
+        flex-wrap: wrap;
+    }
+    .receta__clasificacion--dificultad {
+        margin-top: 10px;
+    }
+    .receta__clasificacion--calorias,
+    .receta__clasificacion--dificultad{
+        width: 100%;
+        display: flex;
+    }
+    .receta__clasificacion--calorias label,
+    .receta__clasificacion--dificultad label {
+        width: 29%;
+    }
+    .receta__clasificacion--calorias select,
+    input,
+    .receta__clasificacion--dificultad select,
+    input {
+        width: 65%;
+    }
+}
+
+@media(min-width: 401px) and (max-width: 768px) {
+    input,
+    select {
+        width: 16rem;
+    }
+    .receta__botones {
+        margin-bottom: -6rem;
+        margin-top: 2rem;
+    }
+}

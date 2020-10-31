@@ -1,0 +1,14 @@
+<div class="misRecetas-element" [ngClass]="esRecetaPropia() ? 'bordered esRecetaPropia()': 'greyedOut'">
+    <img src="{{recetaChild.imagen}}" class="foto_receta">
+    <div class="datos_receta">
+        <h2 (click)=irReceta()> {{recetaChild.titulo}}</h2>
+        <h3 class="calorias_receta"> Calorias:{{recetaChild.calorias}}
+            <a class="far fa-edit" (click)=irReceta() *ngIf="esRecetaPropia()"></a>
+        </h3>
+        <h3 class="dificultad_receta">Dificultad:{{recetaChild.dificultad.tipo}}
+            <i class="far fa-trash-alt" *ngIf="esRecetaPropia()" (click)="clickMethod('name')"></i>
+            <!-- <button type=button class="btn btn-primary"  (click)="clickMethod('name')">Delete me</button> -->
+        </h3>
+
+    </div>
+</div>

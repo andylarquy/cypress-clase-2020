@@ -1,0 +1,14 @@
+<div class="contenedor_titulo-perfil">
+    <div class="nombre_imc">
+        <h1 class="nombre_perfil">{{usuarioLogueado.nombre}}</h1>
+        <h2 class="imc_perfil">IMC:{{usuarioLogueado.calculoIMC()}}
+            <div class="estado_salud">
+                <i class="fas fa-heartbeat" id="corazon-imc"></i>
+                <span *ngIf="usuarioLogueado.esSaludable(); else noSaludable">Saludable</span>
+                <ng-template #noSaludable>
+                    <span>No Saludable</span>
+                </ng-template>
+            </div>
+        </h2>
+    </div>
+</div>
