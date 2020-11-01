@@ -1,18 +1,18 @@
 <main>
     <article class="contenedor-loginbox">
         <div class="loginbox">
-            <h1 class="titulo-loginbox" data-cy=login-title>{{title}}</h1>
+            <h1 class="titulo-loginbox" data-testid=login-title>{{title}}</h1>
             <form>
                 <label for="username">Usuario</label>
                 <input type="text" name="username" id="username" placeholder="Ingrese usuario" autocomplete="off" [(ngModel)]="username" data-testid="username">
                 <label for="password">Contraseña</label>
                 <input type="password" name="password" placeholder="Ingrese contraseña" [(ngModel)]="password" data-testid="password">
                 <div class="alert_container">
-                    <div class="alert" *ngFor="let error of errors" style="padding:1rem">{{error}}</div>
+                    <div class="alert" *ngFor="let error of errors" style="padding:1rem" data-cy=login-error-message>{{error}}</div>
                 </div>
                 <div class="loginbox_remember-forgot">
                     <div class="loginbox_remember">
-                        <input type="checkbox" class="checkbox_login" name="remember" id="recordarUsuario">
+                        <input type="checkbox" class="checkbox_login" name="remember" id="recordarUsuario" data-testid="login-remeber-checkbox">
                         <label for="remember">Recordar usuario</label>
                     </div>
                     <a href="#" class="loginbox_forgot">¿Olvidó su contraseña?</a>
